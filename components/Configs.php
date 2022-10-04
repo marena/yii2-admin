@@ -141,6 +141,8 @@ class Configs extends \mdm\admin\BaseObject
      */
     public function init()
     {
+        $this->authManager = Yii::$app->controller->module->authManager;
+        
         foreach (self::$_classes as $key => $class) {
             try {
                 $this->{$key} = empty($this->{$key}) ? null : Instance::ensure($this->{$key}, $class);
