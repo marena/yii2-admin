@@ -39,6 +39,10 @@ use yii\helpers\Inflector;
 class Module extends \yii\base\Module
 {
     /**
+    * @var string 
+    */
+    public $authManager = 'authManager';
+    /**
      * @inheritdoc
      */
     public $defaultRoute = 'assignment';
